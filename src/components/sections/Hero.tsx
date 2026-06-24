@@ -220,17 +220,17 @@ export default function Hero() {
 
           {/* ── CTAs ── */}
           <motion.div variants={item} className="flex items-center gap-4 pt-1">
-            <a
-              href="#projects"
-              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-medium text-zinc-950 bg-zinc-50 hover:bg-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
-            >
-              Ver proyectos
-            </a>
+          <a
+            href="#projects"
+            className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-medium text-zinc-950 bg-zinc-50 transition-all duration-200 ease-out hover:bg-zinc-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.18)] active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+          >
+            Ver proyectos
+            <span aria-hidden="true">↓</span>
+          </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 rounded"
-            >
-              Contacto
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-orange-400 border border-orange-500/40 px-5 py-2.5 rounded-md transition-all duration-200 hover:text-orange-300 hover:border-orange-400 hover:shadow-[0_0_12px_rgba(249,115,22,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500">
+              Hablemos
             </a>
           </motion.div>
 
