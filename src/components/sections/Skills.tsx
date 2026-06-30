@@ -338,7 +338,7 @@ function SkillItem({ skill }: { skill: SkillCard }) {
   return (
     <div
       style={{ ["--accent" as string]: skill.accent }}
-      className="group relative flex h-full min-h-[460px] flex-col overflow-hidden rounded-2xl border border-[rgb(var(--accent)/0.13)] transition-all duration-300 hover:border-[rgb(var(--accent)/0.26)] hover:shadow-[0_0_40px_-8px_rgb(var(--accent)/0.35)]"
+      className="group relative flex h-full min-h-[460px] flex-col overflow-hidden rounded-2xl border border-[rgb(var(--accent)/0.13)] bg-[#0d0d10] transition-colors duration-300 hover:border-[rgb(var(--accent)/0.22)]"
     >
       {/* Fondo — color + textura de partícula */}
       <div
@@ -353,10 +353,12 @@ function SkillItem({ skill }: { skill: SkillCard }) {
         <div className="absolute inset-0 [background:radial-gradient(55%_45%_at_50%_35%,rgb(var(--accent)/0.22),transparent_75%)]" />
       </div>
 
-      {/* Encabezado — panel glass transparente para que el color del fondo filtre */}
-      <div className="relative bg-black/[0.18] px-7 pt-9 pb-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-xl">
-        {/* Ícono + título */}
-        <div className="flex items-center gap-3">
+      {/* Overlay de oscurecimiento en hover */}
+      <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/25" />
+
+      {/* Panel glass superior — ícono + título + descripción */}
+      <div className="relative bg-white/[0.05] backdrop-blur-md px-5 pt-7 pb-5">
+        <div className="flex items-center gap-3 mb-4">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[rgb(var(--accent)/0.14)]">
             <Icon className="h-[18px] w-[18px] text-[rgb(var(--accent))]" strokeWidth={1.7} />
           </div>
@@ -364,25 +366,33 @@ function SkillItem({ skill }: { skill: SkillCard }) {
             {skill.title}
           </h3>
         </div>
-        {/* Descripción — altura mínima reservada para 2 líneas → alineación consistente */}
-        <p className="mt-4 min-h-[2.75rem] text-[13px] leading-relaxed text-[#909099]">
+        <p className="text-[13px] leading-relaxed text-[#909099] min-h-[2.75rem]">
           {skill.description}
         </p>
+      </div>
+
+      {/* Banda de cristal superior */}
+      <div className="relative h-[3px] w-full shrink-0">
+        <div className="absolute inset-x-0 top-[1px] h-px bg-gradient-to-r from-transparent via-white/[0.28] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.07] to-transparent [filter:blur(2px)]" />
       </div>
 
       {/* Espacio central — el patrón de puntos queda visible aquí */}
       <div className="relative flex-1" />
 
-      {/* Divider — gradiente sutil en lugar de borde plano */}
-      <div className="relative h-px bg-gradient-to-r from-transparent via-white/[0.07] to-transparent" />
+      {/* Banda de cristal inferior */}
+      <div className="relative h-[3px] w-full shrink-0">
+        <div className="absolute inset-x-0 top-[1px] h-px bg-gradient-to-r from-transparent via-white/[0.28] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.07] to-transparent [filter:blur(2px)]" />
+      </div>
 
-      {/* Footer — panel glass con tecnologías */}
-      <div className="relative bg-black/[0.18] px-7 py-6 backdrop-blur-xl">
+      {/* Panel glass inferior — skills */}
+      <div className="relative bg-white/[0.05] backdrop-blur-md px-5 py-4">
         <div className="flex flex-nowrap gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {skill.technologies.map((tech) => (
             <span
               key={tech}
-              className="shrink-0 whitespace-nowrap rounded-md border border-white/[0.07] bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] tracking-wide text-[#606068] transition-colors duration-300 group-hover:border-[rgb(var(--accent)/0.2)] group-hover:text-[#888890]"
+              className="shrink-0 whitespace-nowrap rounded-md border border-white/[0.09] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] tracking-wide text-[#606068] transition-colors duration-300 group-hover:border-[rgb(var(--accent)/0.2)] group-hover:text-[#888890]"
             >
               {tech}
             </span>
