@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <SectionDivider />
       <Skills />
-      <SectionDivider />
+      <SectionDivider label="PROJECTS" />
       <Projects />
     </main>
   );

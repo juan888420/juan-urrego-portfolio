@@ -313,7 +313,7 @@ export default function HeroBackground() {
   return (
     <div
       aria-hidden="true"
-      className="fixed inset-0 -z-10 overflow-hidden bg-[#09090B]"
+      className="absolute inset-0 -z-10 overflow-hidden bg-[#09090B]"
     >
       {/* ── Canvas: grid + diamond ──────────────────────────────────────────── */}
       <canvas
