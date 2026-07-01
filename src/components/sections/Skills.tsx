@@ -197,7 +197,7 @@ export default function Skills() {
         <div className="mb-16 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight text-[#f4f4f5] sm:text-4xl">
-              Habilidades &amp; Tecnologías
+              Habilidades &amp; Tecnologías 
             </h2>
             <p className="mt-3 max-w-md text-[15px] leading-relaxed text-[#a1a1aa]">
               Capacidades reales que respaldo con las herramientas que uso día a día.

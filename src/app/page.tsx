@@ -3,6 +3,7 @@ import HeroBackground from "@/components/sections/HeroBackground";
 import Hero from "@/components/sections/Hero";    
 import SectionDivider from "@/components/ui/SectionDivider";
 import Skills from "@/components/sections/Skills";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <Hero />
       <SectionDivider />
       <Skills />
+      <SectionDivider />
+      <Projects />
     </main>
   );
 }
