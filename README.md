@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Juan Pablo Urrego | Portfolio
 
-## Getting Started
+Personal portfolio built as a product: dark, minimal and motion-driven, inspired by Raycast, Linear and Vercel.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white)
+
+A single-page portfolio for a full-stack developer focused on AI products and automations. It showcases projects, skills and contact info with a premium dark UI, custom canvas animations and careful attention to spacing and typography.
+
+<!-- Screenshot: replace with a real capture of the hero section -->
+<!-- ![Portfolio hero](docs/screenshot-hero.png) -->
+
+## Features
+
+- Interactive hero background rendered on canvas: cursor-lit grid, animated diamond with shimmer stripes and parallax gradient orbs
+- Projects section with a featured card and a responsive secondary grid
+- Skills section with category tabs, staggered card reveal and a touch carousel with snap scrolling on mobile
+- Glassmorphism details: frosted panels, crystal band separators and animated section dividers with floating particles
+- Fully responsive, mobile-first layout with a floating pill navbar and sheet menu
+- Subtle motion throughout via Framer Motion, tuned to stay out of the way
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) (App Router)
+- [React 19](https://react.dev)
+- [TypeScript 5](https://www.typescriptlang.org) (strict)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [Framer Motion](https://www.framer.com/motion/)
+- [shadcn/ui](https://ui.shadcn.com) primitives (Radix UI)
+- Icons: [Lucide](https://lucide.dev), [Phosphor](https://phosphoricons.com), react-icons
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/juan888420/new-portafolio.git
+   cd new-portafolio
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Usage
+
+Available scripts:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev     # start the dev server
+npm run build   # production build
+npm run start   # serve the production build
+npm run lint    # run ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Content (projects, skills, copy) lives directly in the section components under `src/components/sections`, so updating the portfolio is editing typed data arrays, no CMS required.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                  # App Router: layout, page, global styles
+├── components/
+│   ├── layout/           # Navbar, Footer, Container
+│   ├── sections/         # Hero, HeroBackground, Projects, Skills, Contact
+│   └── ui/               # shadcn/ui primitives + custom pieces (SectionDivider, RaycastBadge)
+└── lib/                  # Utilities (cn helper)
+```
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No license file yet. All rights reserved.

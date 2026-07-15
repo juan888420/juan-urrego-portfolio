@@ -29,8 +29,8 @@ interface Project {
 // ──────────────────────────────────────────────────────────────────────────
 
 const FEATURED: Project = {
-  slug:        "nomada-travel-ai",
-  title:       "Nómada",
+  slug:        "AI-OS",
+  title:       "AI-OS",
   tagline:     "AI travel planning, redefined.",
   description:
     "Full-stack SaaS that turns a one-line destination into a complete, editable trip itinerary. Powered by Claude API for reasoning and Supabase for real-time collaboration. Built to feel fast and obvious.",
@@ -43,8 +43,8 @@ const FEATURED: Project = {
 
 const SECONDARY: Project[] = [
   {
-    slug:        "clinica-plus-automation",
-    title:       "Clínica+",
+    slug:        "MediReserva",
+    title:       "MediReserva",
     tagline:     "Automation for dental clinics.",
     description:
       "WhatsApp-native appointment system with AI triage and automatic follow-ups. Connects n8n, Supabase, and Manychat into a single workflow that saves the front desk two hours a day.",
@@ -54,8 +54,8 @@ const SECONDARY: Project[] = [
     accent:      "52 211 153",
   },
   {
-    slug:        "shelf-rag-knowledge",
-    title:       "Shelf",
+    slug:        "Job-Tracker",
+    title:       "Job-Tracker",
     tagline:     "Your knowledge base, searchable by meaning.",
     description:
       "A personal RAG system that indexes notes, PDFs, and URLs into a pgvector store. Ask questions in plain language, get answers with citations. Zero cloud lock-in.",
@@ -65,8 +65,8 @@ const SECONDARY: Project[] = [
     accent:      "129 140 248",
   },
   {
-    slug:        "pulse-rental-dashboard",
-    title:       "Pulse",
+    slug:        "MistherBarber",
+    title:       "MistherBarber",
     tagline:     "Analytics for vacation rental hosts.",
     description:
       "Real-time occupancy and revenue dashboard that pulls from Airbnb, Booking.com, and direct channels. Built for a host managing 14 properties who was drowning in spreadsheets.",
