@@ -31,14 +31,14 @@ interface Project {
 const FEATURED: Project = {
   slug:        "AI-OS",
   title:       "AI-OS",
-  tagline:     "AI travel planning, redefined.",
+  tagline:     "An AI operating system for your business.",
   description:
-    "Full-stack SaaS that turns a one-line destination into a complete, editable trip itinerary. Powered by Claude API for reasoning and Supabase for real-time collaboration. Built to feel fast and obvious.",
+    "A conversational assistant that understands your business, replies to customers and executes real actions. Connects WhatsApp, Gmail, Google Calendar and CRM into a single live control panel. No complex setup.",
   stack:       ["Next.js", "TypeScript", "Claude API", "Supabase", "Tailwind"],
-  image:       "https://picsum.photos/seed/nomada-travel-mountains/1200/700",
+  image:       "/ai-os.png",
   liveUrl:     "#",
-  githubUrl:   "#",
-  accent:      "249 115 22",
+  githubUrl:   "https://github.com/juan888420/ai-os",
+  accent:      "94 234 212",
 };
 
 const SECONDARY: Project[] = [
@@ -49,9 +49,10 @@ const SECONDARY: Project[] = [
     description:
       "WhatsApp-native appointment system with AI triage and automatic follow-ups. Connects n8n, Supabase, and Manychat into a single workflow that saves the front desk two hours a day.",
     stack:       ["n8n", "Supabase", "Claude API", "Manychat"],
-    image:       "https://picsum.photos/seed/clinica-dental-white/800/600",
-    liveUrl:     "#",
-    accent:      "52 211 153",
+    image:       "/medirerva.png",
+    liveUrl:     "https://reservas-project-production.up.railway.app/",
+    githubUrl:   "https://github.com/juan888420/Reservas-project",
+    accent:      "99 102 241",
   },
   {
     slug:        "Job-Tracker",
@@ -61,8 +62,8 @@ const SECONDARY: Project[] = [
       "A personal RAG system that indexes notes, PDFs, and URLs into a pgvector store. Ask questions in plain language, get answers with citations. Zero cloud lock-in.",
     stack:       ["Next.js", "Supabase pgvector", "Embeddings", "TypeScript"],
     image:       "https://picsum.photos/seed/shelf-library-books-dark/800/600",
-    githubUrl:   "#",
-    accent:      "129 140 248",
+    githubUrl:   "https://github.com/juan888420/job-tracker",
+    accent:      "167 139 250",
   },
   {
     slug:        "MistherBarber",
@@ -71,9 +72,10 @@ const SECONDARY: Project[] = [
     description:
       "Real-time occupancy and revenue dashboard that pulls from Airbnb, Booking.com, and direct channels. Built for a host managing 14 properties who was drowning in spreadsheets.",
     stack:       ["Next.js", "Supabase", "Recharts", "Node.js"],
-    image:       "https://picsum.photos/seed/pulse-analytics-dark-ui/800/600",
-    liveUrl:     "#",
-    accent:      "56 189 248",
+    image:       "/misther_barber.png",
+    liveUrl:     "https://misther-baber-dqv2vebj2-juan-pablo-s-projects17.vercel.app/",
+    githubUrl:   "https://github.com/juan888420/Misther_Baber",
+    accent:      "212 175 55",
   },
 ];
 
@@ -99,7 +101,7 @@ const itemVariants = {
 
 export default function Projects() {
   return (
-    <section className="bg-[#09090b] py-28 sm:py-36">
+    <section id="projects" className="scroll-mt-24 bg-[#09090b] py-28 sm:py-36">
       <Container>
         {/* Heading */}
         <motion.div
@@ -219,6 +221,8 @@ function FeaturedCard({ project }: { project: Project }) {
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group/btn inline-flex items-center gap-1.5 rounded-full border border-[rgb(var(--accent)/0.35)] bg-[rgb(var(--accent)/0.1)] px-4 py-2 text-[13px] font-medium text-[rgb(var(--accent))] transition-colors duration-200 hover:bg-[rgb(var(--accent)/0.18)]"
               >
                 Ver proyecto
@@ -228,6 +232,8 @@ function FeaturedCard({ project }: { project: Project }) {
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.1] px-4 py-2 text-[13px] font-medium text-[#a1a1aa] transition-colors duration-200 hover:border-white/[0.2] hover:text-[#f4f4f5]"
               >
                 <GithubLogo weight="fill" className="h-4 w-4" />
@@ -239,11 +245,11 @@ function FeaturedCard({ project }: { project: Project }) {
       </div>
 
       {/* Right - image panel */}
-      <div className="relative min-h-[280px] overflow-hidden lg:min-h-0">
+      <div className="relative min-h-[280px] overflow-hidden bg-[#0a0a0c] lg:min-h-0">
         <img
           src={project.image}
           alt={project.title}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="h-full w-full object-contain object-center p-3 transition-transform duration-700 group-hover:scale-[1.02] sm:p-5"
         />
         {/* Inner edge fade toward content panel */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d10] via-transparent to-transparent lg:from-[#0d0d10]/60" />
@@ -266,11 +272,11 @@ function SecondaryCard({ project }: { project: Project }) {
       className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0d0d10] transition-[border-color,box-shadow] duration-300 hover:border-[rgb(var(--accent)/0.28)] hover:shadow-[0_20px_50px_-16px_rgba(0,0,0,0.55)]"
     >
       {/* Image */}
-      <div className="relative h-44 overflow-hidden">
+      <div className="relative h-44 overflow-hidden bg-[#0a0a0c]">
         <img
           src={project.image}
           alt={project.title}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="h-full w-full object-contain object-center p-2.5 transition-transform duration-700 group-hover:scale-[1.03]"
         />
         {/* Scrim */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d10] via-[#0d0d10]/30 to-transparent" />
@@ -319,7 +325,9 @@ function SecondaryCard({ project }: { project: Project }) {
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
-                className="inline-flex items-center gap-1 text-[13px] font-medium text-[rgb(var(--accent))] transition-opacity duration-200 hover:opacity-70"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/btn inline-flex items-center gap-1.5 rounded-full border border-[rgb(var(--accent)/0.35)] bg-[rgb(var(--accent)/0.1)] px-4 py-2 text-[13px] font-medium text-[rgb(var(--accent))] transition-colors duration-200 hover:bg-[rgb(var(--accent)/0.18)]"
               >
                 Ver proyecto
                 <ArrowUpRight weight="bold" className="h-3.5 w-3.5" />
@@ -328,7 +336,9 @@ function SecondaryCard({ project }: { project: Project }) {
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
-                className="inline-flex items-center gap-1 text-[13px] text-[#71717a] transition-colors duration-200 hover:text-[#f4f4f5]"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.1] px-4 py-2 text-[13px] font-medium text-[#a1a1aa] transition-colors duration-200 hover:border-white/[0.2] hover:text-[#f4f4f5]"
               >
                 <GithubLogo weight="fill" className="h-4 w-4" />
                 GitHub
