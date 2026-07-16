@@ -111,11 +111,23 @@ export default function Navbar() {
                   <div className="my-2 h-px bg-white/10" />
 
                   <div className="flex justify-center gap-6 text-zinc-400">
-                    <a href="https://github.com/juan888420" target="_blank">
+                    <a
+                      href="https://github.com/juan888420"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 transition-colors hover:text-zinc-100"
+                    >
+                      <FaGithub size={16} />
                       GitHub
                     </a>
 
-                    <a href="https://www.linkedin.com/in/juanpurr" target="_blank">
+                    <a
+                      href="https://www.linkedin.com/in/juanpurr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 transition-colors hover:text-zinc-100"
+                    >
+                      <FaLinkedin size={16} />
                       LinkedIn
                     </a>
                   </div>

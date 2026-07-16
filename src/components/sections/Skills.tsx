@@ -191,7 +191,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section className="bg-[#09090b] py-28 sm:py-36">
+    <section id="skills" className="scroll-mt-24 bg-[#09090b] py-28 sm:py-36">
       <Container>
         {/* Encabezado */}
         <div className="mb-16 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">

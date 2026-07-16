@@ -151,7 +151,7 @@ function EmailButton() {
 
 export default function Contact() {
   return (
-    <section id="contacto" className="relative overflow-hidden bg-[#09090b] py-32 sm:py-40">
+    <section id="contact" className="relative scroll-mt-24 overflow-hidden bg-[#09090b] py-32 sm:py-40">
       {/* Glow ambiental muy sutil detrás del contenido */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[680px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f97316]/[0.04] blur-3xl" />
 
