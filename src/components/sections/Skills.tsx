@@ -388,11 +388,11 @@ function SkillItem({ skill }: { skill: SkillCard }) {
 
       {/* Panel glass inferior — skills */}
       <div className="relative bg-white/[0.05] backdrop-blur-md px-5 py-4">
-        <div className="flex flex-nowrap gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex flex-wrap gap-2">
           {skill.technologies.map((tech) => (
             <span
               key={tech}
-              className="shrink-0 whitespace-nowrap rounded-md border border-white/[0.09] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] tracking-wide text-[#606068] transition-colors duration-300 group-hover:border-[rgb(var(--accent)/0.2)] group-hover:text-[#888890]"
+              className="whitespace-nowrap rounded-md border border-white/[0.09] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] tracking-wide text-[#606068] transition-colors duration-300 group-hover:border-[rgb(var(--accent)/0.2)] group-hover:text-[#888890]"
             >
               {tech}
             </span>
