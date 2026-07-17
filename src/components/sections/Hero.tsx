@@ -58,7 +58,7 @@ export default function Hero() {
             className="flex flex-col gap-6 md:gap-7 max-w-xl flex-1 min-w-0"
           >
             <motion.div variants={fadeUp}>
-              <RaycastBadge leftText="Software Developer" />
+              <RaycastBadge leftText="Desarrollador de Software" />
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex flex-col gap-1">

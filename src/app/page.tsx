@@ -16,11 +16,11 @@ export default function Home() {
          <Hero /> 
       </div> 
       <div className="h-48 lg:h-64 bg-[#09090b]" aria-hidden="true" />
-      <SectionDivider label="PROJECTS" />
+      <SectionDivider label="PROYECTOS" />
       <Projects />
-      <SectionDivider label="SKILLS" />
+      <SectionDivider label="HABILIDADES" />
       <Skills />
-      <SectionDivider label="CONTACT" />
+      <SectionDivider label="CONTACTO" />
       <Contact />
       <Footer />
     </main>
