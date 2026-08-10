@@ -26,18 +26,29 @@ interface Project {
 // ──────────────────────────────────────────────────────────────────────────
 
 const FEATURED: Project = {
-  slug:        "AI-OS",
-  title:       "AI-OS",
-  tagline:     "Plataforma de IA conversacional para negocios.",
+  slug:        "Vectra",
+  title:       "Vectra",
+  tagline:     "Simulador de escenarios financieros personales.",
   description:
-    "Asistente de chat en tiempo real impulsado por la Claude API, con queries reactivas e historial persistente por cliente sobre Convex. MVP en TypeScript estricto con landing de demo en vivo; integraciones con WhatsApp, CRM y agendamiento en el roadmap.",
-  stack:       ["React", "TypeScript", "Vite", "Convex", "Claude API"],
-  image:       "/ai-os.png",
-  githubUrl:   "https://github.com/juan888420/ai-os",
-  accent:      "94 234 212",
+    "Modela decisiones financieras antes de tomarlas: construye escenarios combinando productos reutilizables, categorías y fuentes de ingreso, y compara su impacto proyectado a mes, semestre y año. API en Fastify con JWT y refresh tokens; frontend en React con TanStack Query y validación end-to-end con Zod.",
+  stack:       ["React", "TypeScript", "Fastify", "Prisma", "PostgreSQL"],
+  image:       "/vectra1.png",
+  githubUrl:   "https://github.com/juan888420/vectra",
+  accent:      "248 113 113",
 };
 
 const SECONDARY: Project[] = [
+  {
+    slug:        "AI-OS",
+    title:       "AI-OS",
+    tagline:     "Plataforma de IA conversacional para negocios.",
+    description:
+      "Asistente de chat en tiempo real impulsado por la Claude API, con queries reactivas e historial persistente por cliente sobre Convex. MVP en TypeScript estricto con landing de demo en vivo; integraciones con WhatsApp, CRM y agendamiento en el roadmap.",
+    stack:       ["React", "TypeScript", "Vite", "Convex", "Claude API"],
+    image:       "/ai-os.png",
+    githubUrl:   "https://github.com/juan888420/ai-os",
+    accent:      "94 234 212",
+  },
   {
     slug:        "MediReserva",
     title:       "MediReserva",
@@ -131,7 +142,7 @@ export default function Projects() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={containerVariants}
-          className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
           {SECONDARY.map((project) => (
             <motion.div key={project.slug} variants={itemVariants}>
@@ -186,7 +197,7 @@ function FeaturedCard({ project }: { project: Project }) {
             {project.stack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-md border border-white/[0.08] bg-white/[0.04] px-2 py-1 font-mono text-[11px] tracking-wide text-[#8a8a93]"
+                className="rounded-md border border-white/[0.08] bg-white/[0.04] px-2 py-1 font-mono text-[11px] tracking-wide text-[#8a8a93] transition-colors duration-200 hover:border-[rgb(var(--accent)/0.4)] hover:bg-[rgb(var(--accent)/0.08)] hover:text-[rgb(var(--accent))]"
               >
                 {tech}
               </span>
@@ -200,7 +211,7 @@ function FeaturedCard({ project }: { project: Project }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/btn inline-flex items-center gap-1.5 rounded-full border border-[rgb(var(--accent)/0.35)] bg-[rgb(var(--accent)/0.1)] px-4 py-2 text-[13px] font-medium text-[rgb(var(--accent))] outline-none transition-colors duration-200 hover:bg-[rgb(var(--accent)/0.18)] focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent)/0.6)]"
+                className="group/btn inline-flex w-[142px] items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-[rgb(var(--accent)/0.35)] bg-[rgb(var(--accent)/0.1)] px-4 py-2 text-[13px] font-medium text-[rgb(var(--accent))] outline-none transition-colors duration-200 hover:bg-[rgb(var(--accent)/0.18)] focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent)/0.6)]"
               >
                 Ver proyecto
                 <ArrowUpRight weight="bold" className="h-3.5 w-3.5" />
@@ -211,9 +222,9 @@ function FeaturedCard({ project }: { project: Project }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.1] px-4 py-2 text-[13px] font-medium text-[#a1a1aa] outline-none transition-colors duration-200 hover:border-white/[0.2] hover:text-[#f4f4f5] focus-visible:ring-2 focus-visible:ring-white/40"
+                className="inline-flex w-[142px] items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/[0.1] px-4 py-2 text-[13px] font-medium text-[#a1a1aa] outline-none transition-colors duration-200 hover:border-white/[0.2] hover:text-[#f4f4f5] focus-visible:ring-2 focus-visible:ring-white/40"
               >
-                <GithubLogo weight="fill" className="h-4 w-4" />
+                <GithubLogo weight="fill" className="h-3.5 w-3.5" />
                 GitHub
               </a>
             )}
@@ -275,7 +286,7 @@ function SecondaryCard({ project }: { project: Project }) {
             {project.title}
           </h3>
           <p
-            className="mt-0.5 text-[12px] font-medium"
+            className="mt-0.5 min-h-[36px] text-[12px] font-medium leading-relaxed"
             style={{ color: `rgb(var(--accent))` }}
           >
             {project.tagline}
@@ -291,7 +302,7 @@ function SecondaryCard({ project }: { project: Project }) {
             {project.stack.map((tech) => (
               <span
                 key={tech}
-                className="whitespace-nowrap rounded-md border border-white/[0.08] bg-white/[0.04] px-2 py-1 font-mono text-[11px] tracking-wide text-[#8a8a93]"
+                className="whitespace-nowrap rounded-md border border-white/[0.08] bg-white/[0.04] px-2 py-1 font-mono text-[11px] tracking-wide text-[#8a8a93] transition-colors duration-200 hover:border-[rgb(var(--accent)/0.4)] hover:bg-[rgb(var(--accent)/0.08)] hover:text-[rgb(var(--accent))]"
               >
                 {tech}
               </span>
@@ -308,7 +319,7 @@ function SecondaryCard({ project }: { project: Project }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/btn inline-flex items-center gap-1.5 rounded-full border border-[rgb(var(--accent)/0.35)] bg-[rgb(var(--accent)/0.1)] px-4 py-2 text-[13px] font-medium text-[rgb(var(--accent))] outline-none transition-colors duration-200 hover:bg-[rgb(var(--accent)/0.18)] focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent)/0.6)]"
+                className="group/btn inline-flex w-[142px] items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-[rgb(var(--accent)/0.35)] bg-[rgb(var(--accent)/0.1)] px-4 py-2 text-[13px] font-medium text-[rgb(var(--accent))] outline-none transition-colors duration-200 hover:bg-[rgb(var(--accent)/0.18)] focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent)/0.6)]"
               >
                 Ver proyecto
                 <ArrowUpRight weight="bold" className="h-3.5 w-3.5" />
@@ -319,9 +330,9 @@ function SecondaryCard({ project }: { project: Project }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.1] px-4 py-2 text-[13px] font-medium text-[#a1a1aa] outline-none transition-colors duration-200 hover:border-white/[0.2] hover:text-[#f4f4f5] focus-visible:ring-2 focus-visible:ring-white/40"
+                className="inline-flex w-[142px] items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/[0.1] px-4 py-2 text-[13px] font-medium text-[#a1a1aa] outline-none transition-colors duration-200 hover:border-white/[0.2] hover:text-[#f4f4f5] focus-visible:ring-2 focus-visible:ring-white/40"
               >
-                <GithubLogo weight="fill" className="h-4 w-4" />
+                <GithubLogo weight="fill" className="h-3.5 w-3.5" />
                 GitHub
               </a>
             )}
