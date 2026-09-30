@@ -30,6 +30,7 @@ const PROJECTS: Project[] = [
     description:
       "Centraliza los expedientes de una oficina pública y muestra en segundos el estado documental, financiero y temporal de cada contrato. Un motor de reglas determinístico calcula saldos, plazos y alertas; la IA solo propone y el usuario valida.",
     stack:       ["Next.js", "Fastify", "Prisma", "PostgreSQL", "Supabase"],
+    image:       "/vigia.png",
     isPrivate:   true,
     accent:      "52 211 153",
   },
