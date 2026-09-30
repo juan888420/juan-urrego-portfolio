@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import HeroBackground from "@/components/sections/HeroBackground";
 import Hero from "@/components/sections/Hero";    
 import SectionDivider from "@/components/ui/SectionDivider";
+import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
@@ -16,6 +17,8 @@ export default function Home() {
          <Hero /> 
       </div> 
       <div className="h-48 lg:h-64 bg-[#09090b]" aria-hidden="true" />
+      <SectionDivider label="SOBRE MÍ" />
+      <About />
       <SectionDivider label="PROYECTOS" />
       <Projects />
       <SectionDivider label="HABILIDADES" />
