@@ -49,14 +49,14 @@ const MILESTONES: Milestone[] = [
     period:      "2026 — Presente",
     title:       "Productos propios",
     place:       "Independiente",
-    description: "Seis productos full-stack de nivel producción: simulación financiera, reservas médicas con pagos, IA conversacional y control contractual para el sector público.",
+    description: "Productos full-stack de principio a fin: desde un simulador financiero y reservas médicas con pagos hasta un sistema en producción para el sector público.",
     current:     true,
   },
   {
-    period:      "2022 — 2023",
-    title:       "Soporte y Automatización TI",
+    period:      "Oct 2022 — Abr 2023",
+    title:       "Soporte Técnico",
     place:       "Flag Soluciones",
-    description: "Más de 10 incidencias diarias resueltas y automatización de tareas operativas repetitivas del equipo de soporte.",
+    description: "Unas 10 incidencias diarias resueltas, QA sobre los sistemas en uso y respaldo semanal de la información.",
   },
   {
     period:      "Formación",
@@ -69,7 +69,7 @@ const MILESTONES: Milestone[] = [
 const NOW_STATUS = [
   { label: "Modelo de datos",      status: "Listo",   done: true },
   { label: "Motor de reglas",      status: "Listo",   done: true },
-  { label: "Clasificación con IA", status: "Próximo", done: false },
+  { label: "Clasificación con IA", status: "Listo",   done: true },
 ];
 
 // ──────────────────────────────────────────────────────────────────────────
@@ -187,13 +187,13 @@ export default function About() {
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-[#f97316]" />
                   </span>
                   <h3 className="text-[22px] font-semibold tracking-tight text-[#f4f4f5]">
-                    Construyendo Vigía
+                    Vigía, en producción
                   </h3>
                 </div>
                 <p className="mt-4 text-[14px] leading-relaxed text-[#9a9aa3]">
-                  Una plataforma de control contractual para el sector público: un motor de
-                  reglas calcula saldos, plazos y alertas, y la IA solo clasifica documentos
-                  que una persona valida.
+                  Plataforma de control contractual para una oficina pública, desplegada y en
+                  uso: un motor de reglas calcula saldos, plazos y alertas, y la IA solo
+                  clasifica documentos que una persona valida.
                 </p>
                 <ul className="mt-6 divide-y divide-white/[0.06] border-y border-white/[0.06]">
                   {NOW_STATUS.map((item) => (

@@ -28,7 +28,7 @@ const PROJECTS: Project[] = [
     title:       "Vigía",
     tagline:     "Control y seguimiento de contratos públicos.",
     description:
-      "Centraliza los expedientes de una oficina pública y muestra en segundos el estado documental, financiero y temporal de cada contrato. Un motor de reglas determinístico calcula saldos, plazos y alertas; la IA solo propone y el usuario valida.",
+      "En producción para una oficina pública: centraliza los expedientes y muestra en segundos el estado documental, financiero y temporal de cada contrato. Un motor de reglas calcula saldos, plazos y alertas; la IA clasifica los PDFs y el usuario valida.",
     stack:       ["Next.js", "Fastify", "Prisma", "PostgreSQL", "Supabase"],
     image:       "/vigia.png",
     isPrivate:   true,
