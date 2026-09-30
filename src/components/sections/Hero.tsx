@@ -43,7 +43,7 @@ function HairlineDivider() {
 export default function Hero() {
   return (
     <section
-      id="about"
+      id="inicio"
       aria-label="Introducción"
       className="relative scroll-mt-24 overflow-hidden min-h-svh flex items-center pt-28 sm:pt-24 lg:pt-20"
     >
