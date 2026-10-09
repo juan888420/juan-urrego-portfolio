@@ -15,10 +15,10 @@ import Timeline, { type Milestone } from "@/components/sections/about/Timeline";
 
 const MANIFESTO: ManifestoSegment[] = [
   { text: "Construyo" },
-  { text: "productos completos,", accent: true },
-  { text: "de la interfaz a la base de datos, con el mismo cuidado en cada capa. Hoy integro IA donde resuelve" },
-  { text: "problemas reales", accent: true },
-  { text: "y código determinístico donde la exactitud no se negocia." },
+  { text: "productos digitales de principio a fin,", accent: true },
+  { text: "combinando desarrollo, diseño y pensamiento analítico. Me interesa ir más allá de hacer que las cosas funcionen: busco crear" },
+  { text: "soluciones bien pensadas,", accent: true },
+  { text: "técnicamente sólidas y con una experiencia de usuario cuidada." },
 ];
 
 const PROFILE: { label: string; value: ReactNode }[] = [
