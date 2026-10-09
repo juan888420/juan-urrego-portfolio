@@ -369,17 +369,6 @@ function SkillItem({ skill }: { skill: SkillCard }) {
         <p className="text-[13px] leading-relaxed text-[#909099] min-h-[2.75rem]">
           {skill.description}
         </p>
-
-        <div className="mt-5 flex flex-wrap gap-2">
-          {skill.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="whitespace-nowrap rounded-md border border-white/[0.09] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] tracking-wide text-[#606068] transition-colors duration-300 group-hover:border-[rgb(var(--accent)/0.2)] group-hover:text-[#888890]"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
       </div>
 
       {/* Banda de cristal superior */}
@@ -388,7 +377,19 @@ function SkillItem({ skill }: { skill: SkillCard }) {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.07] to-transparent [filter:blur(2px)]" />
       </div>
 
-      {/* Espacio central — el patrón de puntos queda visible aquí */}
+      {/* Skills — debajo del separador, sobre el patrón de puntos */}
+      <div className="relative flex flex-wrap content-start gap-2 px-5 py-5">
+        {skill.technologies.map((tech) => (
+          <span
+            key={tech}
+            className="whitespace-nowrap rounded-md border border-white/[0.08] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] tracking-wide text-[#8a8a93] transition-colors duration-200 hover:border-[rgb(var(--accent)/0.4)] hover:bg-[rgb(var(--accent)/0.08)] hover:text-[rgb(var(--accent))]"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      {/* Espacio restante — el patrón de puntos queda visible aquí */}
       <div className="relative flex-1" />
     </div>
   );
