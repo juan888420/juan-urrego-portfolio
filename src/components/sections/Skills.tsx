@@ -52,21 +52,21 @@ const categories: Category[] = [
       {
         title: "Interfaces modernas",
         description: "Construyo interfaces rápidas, claras y mantenibles.",
-        technologies: ["React", "Next.js", "TypeScript", "Tailwind"],
+        technologies: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "shadcn/ui"],
         icon: LayoutGrid,
         accent: "129 140 248",
       },
       {
         title: "Animación e interacción",
         description: "Microinteracciones y transiciones con sensación premium.",
-        technologies: ["Framer Motion", "CSS", "Canvas"],
+        technologies: ["Motion", "CSS Animations", "Transitions", "Keyframes", "Canvas API"],
         icon: Wand2,
         accent: "167 139 250",
       },
       {
         title: "Responsive design",
         description: "Experiencias consistentes en cualquier dispositivo.",
-        technologies: ["Flexbox", "Grid", "Mobile First"],
+        technologies: ["Flexbox", "CSS Grid", "Mobile First", "Media Queries", "Responsive Images", "Adaptive Layouts"],
         icon: Smartphone,
         accent: "56 189 248",
       },
@@ -79,14 +79,14 @@ const categories: Category[] = [
       {
         title: "APIs REST",
         description: "Desarrollo de APIs escalables y seguras.",
-        technologies: ["Node.js", "Express", "REST", "JWT"],
+        technologies: ["Node.js", "Express.js", "REST APIs", "JWT", "Zod", "Prisma"],
         icon: Server,
         accent: "52 211 153",
       },
       {
         title: "Bases de datos",
         description: "Modelado y consultas eficientes.",
-        technologies: ["Supabase", "Firebase", "SQL"],
+        technologies: ["PostgreSQL", "Supabase", "SQLite", "Firebase", "SQL", "Prisma ORM", "Oracle"],
         icon: Database,
         accent: "45 212 191",
       },
@@ -99,21 +99,21 @@ const categories: Category[] = [
       {
         title: "Agentes y automatización",
         description: "Flujos que conectan APIs y datos en tiempo real.",
-        technologies: ["n8n", "Claude API", "Webhooks"],
+        technologies: ["n8n", "Claude API", "Codex", "Webhooks", "REST APIs", "Tool Calling"],
         icon: Workflow,
         accent: "249 115 22",
       },
       {
         title: "Sistemas RAG",
         description: "Bases de conocimiento consultables con contexto real.",
-        technologies: ["pgvector", "Embeddings", "Supabase"],
+        technologies: ["RAG", "Embeddings", "pgvector", "Supabase", "Vector Search"],
         icon: BrainCircuit,
         accent: "232 121 249",
       },
       {
         title: "Integraciones con LLMs",
         description: "Conecto modelos de lenguaje a productos reales.",
-        technologies: ["Anthropic API", "Prompt Engineering"],
+        technologies: ["Anthropic API", "OpenRouter", "Prompt Engineering", "LLM APIs"],
         icon: MessageSquareCode,
         accent: "251 113 133",
       },
@@ -126,14 +126,14 @@ const categories: Category[] = [
       {
         title: "Entorno de desarrollo",
         description: "Configuraciones pensadas para velocidad y consistencia.",
-        technologies: ["Git", "VS Code", "CLAUDE.md"],
+        technologies: ["Git", "GitHub", "VS Code", "Claude Code", "pnpm", "ESLint"],
         icon: Terminal,
         accent: "96 165 250",
       },
       {
         title: "Despliegue e infraestructura",
         description: "De código a producción sin fricción.",
-        technologies: ["Vercel", "GitHub Actions", "Railway"],
+        technologies: ["Vercel", "Railway", "GitHub Actions", "CI/CD", "Environment Variables", "Docker"],
         icon: Rocket,
         accent: "34 211 238",
       },
@@ -377,28 +377,20 @@ function SkillItem({ skill }: { skill: SkillCard }) {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.07] to-transparent [filter:blur(2px)]" />
       </div>
 
-      {/* Espacio central — el patrón de puntos queda visible aquí */}
+      {/* Skills — debajo del separador, sobre el patrón de puntos */}
+      <div className="relative flex flex-wrap content-start gap-2 px-5 py-5">
+        {skill.technologies.map((tech) => (
+          <span
+            key={tech}
+            className="whitespace-nowrap rounded-md border border-white/[0.08] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] tracking-wide text-[#8a8a93] transition-colors duration-200 hover:border-[rgb(var(--accent)/0.4)] hover:bg-[rgb(var(--accent)/0.08)] hover:text-[rgb(var(--accent))]"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      {/* Espacio restante — el patrón de puntos queda visible aquí */}
       <div className="relative flex-1" />
-
-      {/* Banda de cristal inferior */}
-      <div className="relative h-[3px] w-full shrink-0">
-        <div className="absolute inset-x-0 top-[1px] h-px bg-gradient-to-r from-transparent via-white/[0.28] to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.07] to-transparent [filter:blur(2px)]" />
-      </div>
-
-      {/* Panel glass inferior — skills */}
-      <div className="relative bg-white/[0.05] backdrop-blur-md px-5 py-4">
-        <div className="flex flex-wrap gap-2">
-          {skill.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="whitespace-nowrap rounded-md border border-white/[0.09] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] tracking-wide text-[#606068] transition-colors duration-300 group-hover:border-[rgb(var(--accent)/0.2)] group-hover:text-[#888890]"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }

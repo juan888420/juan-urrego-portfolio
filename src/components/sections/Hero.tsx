@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import { Eye } from "lucide-react";
 import RaycastBadge from "@/components/ui/RaycastBadge";
 import Container from "@/components/layout/Container";
 
@@ -119,8 +120,9 @@ export default function Hero() {
                 Descargar CV ↓
               </a>
               <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"
-                className="text-[11px] text-zinc-500 hover:text-zinc-300 transition-colors duration-200">
-                Ver CV ↗
+                className="inline-flex items-center gap-1.5 text-[11px] text-zinc-500 hover:text-zinc-300 transition-colors duration-200">
+                Ver CV
+                <Eye aria-hidden="true" className="h-3 w-3" strokeWidth={1.6} />
               </a>
             </motion.div>
           </motion.div>
