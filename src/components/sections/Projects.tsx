@@ -32,6 +32,7 @@ const PROJECTS: Project[] = [
       "En producción para una oficina pública: centraliza los expedientes y muestra en segundos el estado documental, financiero y temporal de cada contrato. Un motor de reglas calcula saldos, plazos y alertas; la IA clasifica los PDFs y el usuario valida.",
     stack:       ["Next.js", "Fastify", "Prisma", "PostgreSQL", "Supabase"],
     image:       "/vigia.png",
+    liveUrl:     "https://vigia-taupe-chi.vercel.app/",
     isPrivate:   true,
     accent:      "52 211 153",
   },
