@@ -20,6 +20,7 @@ const PROJECTS: Project[] = [
       "Modela decisiones financieras antes de tomarlas: escenarios con productos, categorías e ingresos, y su impacto proyectado a mes, semestre y año. API en Fastify con JWT y refresh tokens; React con TanStack Query y validación con Zod.",
     stack:       ["React", "TypeScript", "Fastify", "Prisma", "PostgreSQL"],
     image:       "/vectra1.png",
+    liveUrl:     "https://vectra-production-fba3.up.railway.app/",
     githubUrl:   "https://github.com/juan888420/vectra",
     accent:      "248 113 113",
   },
